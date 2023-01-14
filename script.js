@@ -29,3 +29,9 @@ const nameContainer = document.querySelector('.tarot-name')
 const tarotName = document.createElement('h2')
 tarotName.textContent = promptNames[randomNumber]
 nameContainer.appendChild(tarotName);
+
+//display prompt image in content section
+const strippedNames = promptNames[randomNumber].split(' ').join('');
+const lowerCaseNames = strippedNames.toLowerCase();
+const image = document.querySelector('.tarot-card'); 
+image.src = "/img/" + lowerCaseNames + ".jpg"
