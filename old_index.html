@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Richard Sanchez">
+    
+ <title>Tarot: Celtic Cross</title>
+ <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+
+
+ 
+ .redtext { color: white; }
+ div#messageArea {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: rgb(83, 175, 19);
+}
+form { 
+ position: absolute;
+ bottom: 70px;
+ left: 730px;
+ padding: 15px;
+ 
+ }
+ #position0 {
+ width: 110px;
+ height: 190px;
+ position: absolute;
+ left: 208px;
+ top: 348px;
+ }
+ #position1 {
+ width: 110px;
+ height: 190px;
+ position: absolute;
+ left: 208px;
+ top: 372px;
+ transform: rotate(-90deg);
+ }
+ #position2 {
+ width: 110px;
+ height: 190px;
+ position: absolute;
+ left: 209px;
+ top: 131px;
+ }
+ #position3 {
+ width: 110px;
+ height: 190px;
+ position: absolute;
+ left: 388px;
+ top: 349px;
+ }
+ #position4 {
+ width: 110px;
+ height: 190px;
+ position: absolute;
+ left: 209px;
+ top: 568px;
+ }
+ #position5 {
+ width: 110px;
+ height: 190px;
+ position: absolute;
+ left: 27px;
+ top: 349px;
+ }
+ #position6 {
+ width: 110px;
+ height: 190px;
+ position: absolute;
+ left: 526px;
+ top: 651px;
+ }
+ #position7 {
+ width: 110px;
+ height: 190px;
+ position: absolute;
+ left: 526px;
+ top: 446px;
+ }
+ #position8 {
+ width: 110px;
+ height: 190px;
+ position: absolute;
+ left: 525px;
+ top: 241px;
+ }
+ #position9 {
+ width: 110px;
+ height: 190px;
+ position: absolute;
+ left: 525px;
+ top: 34px;
+ }
+ #description {
+ width: 300px;
+ height: 190px;
+ position: absolute;
+ left: 650px;
+ top: 34px;
+ }
+ </style>
+<script src="celticcross.js">
+</script>
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark">
+<div id="board">
+<div id="messageArea"></div>
+<img id="position0" src="back.jpg">
+<img id="position1" src="back.jpg">
+<img id="position2" src="back.jpg">
+<img id="position3" src="back.jpg">
+<img id="position4" src="back.jpg">
+<img id="position5" src="back.jpg">
+<img id="position6" src="back.jpg">
+<img id="position7" src="back.jpg">
+<img id="position8" src="back.jpg">
+<img id="position9" src="back.jpg">
+
+<p id="description" class="redtext">Click a subject below:</p>
+<form>
+<section class="py-1">
+<input type="button" id="subject0" value="Relationships">
+</section>
+<section class="py-1">
+<input type="button" id="subject1" value="Work">
+</section>
+<section class="py-1">
+<input type="button" id="subject2" value="Spirituality">
+</section>
+<section class="py-1">
+<input type="button" id="subject3" value="Growth">
+</section>
+<section class="py-1">
+<input type="button" id="subject4" value="Fortune Telling">
+</section>
+</form>
+</div>
+</body>
+</html>

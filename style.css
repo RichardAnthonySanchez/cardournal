@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@font-face {
+    font-family: intergralcf;
+    src: url(/font-intergral/Fontspring-DEMO-integralcf-bold.otf);
+}
+
+:root {
+    --light-color:rgb(230, 230, 230);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--light-color);
+}
+
+ul {
+    list-style: none;
+    line-height: 3rem;
+}
+
+h1 {
+    font-family: 'intergralcf';
+    font-size: 2rem;
+}
+
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.ul-right {
+    text-align: right;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+    width: 15rem;
+  }
+
+.container {
+    overflow: auto;
+    gap: 10px;
+    background-image: linear-gradient(to right, #3A1447 , #B8A233);
+}
+
+.sidebar {
+    overflow: auto;
+    background-color: #5A3B64;
+    gap: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo {
+    padding: 1.5rem;
+}
+
+.bullets {
+    font-weight: 600;
+}
+
+.labels {
+    gap: 4rem;
+}
+
+.settings {
+    
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 150px;
+    border-radius: 10px;
+}
+
+.header-container {
+    height: 150px;
+
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.content-align {
+    margin-top: 8.8rem;
+    line-height: 2.8;
+    font-weight: 600;
+
+}
+
+.tarot-card {
+    float: left;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.text-content {
+}
+
+.prompt {
+    font-weight: bold;
+}
+
+.content-body {
+}
+
+.tarot-name {
+
+
+}
+
+.date {
+
+}
