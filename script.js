@@ -154,4 +154,13 @@ old_data.push(newEntry);
 
 //save the old + new data to local storage
 localStorage.setItem('data', JSON.stringify(old_data));
+
+//add display none to the form
+const formContainer = document.querySelector('.post-input')
+formContainer.classList.add('d-none');
+
+//add entry body to content area
+const contentBody = document.querySelector('.content-body');
+contentBody.textContent = entryBody;
+contentBody.append;
 });
