@@ -164,3 +164,19 @@ const contentBody = document.querySelector('.content-body');
 contentBody.textContent = entryBody;
 contentBody.append;
 });
+
+//display all entries from my local machine
+const myEntries = document.querySelector('.my-entries');
+myEntries.addEventListener('click', () => {
+    const localEntries = JSON.parse(localStorage.getItem('data'));
+    const contentAlign = document.querySelector('.content-align');
+    contentAlign.classList.add('d-none');
+    const header = document.querySelector('.header');
+    header.classList.add('d-none');
+    for (let i = 0; i < localEntries.length; i++) {
+        const contentContainer = document.querySelector('.content');
+        const entryLink = document.createElement('li');
+        entryLink.textContent = localEntries[i].date;
+        contentContainer.appendChild(entryLink);
+    }
+});
