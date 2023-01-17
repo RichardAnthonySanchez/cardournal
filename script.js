@@ -131,16 +131,26 @@ btn.addEventListener('click', () => {
 
 
 //get user input for current journal entry
-const new_data = document.getElementById('form-text').value;
+const entryBody = document.getElementById('form-text').value;
 
 //if there's nothing saved at the start then save an empty array
 if(localStorage.getItem('data') == null){
     localStorage.setItem('data', '[]')
 }
 
+//create an object that contains all entry data
+function Entry(date, title, prompt, body) {
+    this.date = date
+    this.title = title
+    this.prompt = prompt
+    this.body = body
+}
+
+const newEntry = new Entry (Date(), promptNames[randomNumber], prompts[randomNumber], entryBody)
+
 //get old data and add it to the new data
 const old_data = JSON.parse(localStorage.getItem('data'));
-old_data.push(new_data);
+old_data.push(newEntry);
 
 //save the old + new data to local storage
 localStorage.setItem('data', JSON.stringify(old_data));
