@@ -119,3 +119,15 @@ hr.solid {
 .date {
 
 }
+
+.btn {
+    font-weight: bold;
+    background-color: #5A3B64;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    color: var(--light-color);
+    
+}

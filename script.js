@@ -47,7 +47,7 @@ const prompts = [
 "If I followed my heart today where might it lead me?",
 "What might challenge me today and how can I adapt?",
 "How can I increase my discipline?",
-"Who has experience with my current obstacle and how might they assit me?",
+"Who has experience with my current obstacle and how might they assist me?",
 "How does my current challenge fit into the bigger picture?",
 "If I were more objective while making decisions how might that look?",
 "How might my current challenge be a blessing in disguise?",
@@ -124,3 +124,24 @@ const promptContainer = document.querySelector('.prompt')
 const prompt = document.createElement('h3')
 prompt.textContent = prompts[randomNumber]
 promptContainer.appendChild(prompt);
+
+//event listener for the post button click
+const btn = document.querySelector('.btn-post');
+btn.addEventListener('click', () => {
+
+
+//get user input for current journal entry
+const new_data = document.getElementById('form-text').value;
+
+//if there's nothing saved at the start then save an empty array
+if(localStorage.getItem('data') == null){
+    localStorage.setItem('data', '[]')
+}
+
+//get old data and add it to the new data
+const old_data = JSON.parse(localStorage.getItem('data'));
+old_data.push(new_data);
+
+//save the old + new data to local storage
+localStorage.setItem('data', JSON.stringify(old_data));
+});
