@@ -176,7 +176,10 @@ myEntries.addEventListener('click', () => {
     for (let i = 0; i < localEntries.length; i++) {
         const contentContainer = document.querySelector('.content');
         const entryLink = document.createElement('li');
-        entryLink.textContent = localEntries[i].date;
+        entryLink.innerHTML = 
+        `<a href="index.html">`
+        + localEntries[i].date +
+        `</a>`;
         contentContainer.appendChild(entryLink);
     }
 });
