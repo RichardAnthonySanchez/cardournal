@@ -177,12 +177,40 @@ myEntries.addEventListener('click', () => {
         const contentContainer = document.querySelector('.content');
         const entryLink = document.createElement('li');
         entryLink.innerHTML = 
-        `<a href="index.html"`
+        `<a href="#"`
         + `id=`
         + i
         + `>`
         + localEntries[i].date +
         `</a>`;
         contentContainer.appendChild(entryLink);
+        //create a unique click event listener for each entry
+        const entryClick = document.getElementById(i);
+        entryClick.addEventListener('click', () => {
+            //show header and content again
+            header.classList.remove('d-none');
+            contentAlign.classList.remove('d-none');
+            const formContainer = document.querySelector('.post-input')
+            formContainer.classList.add('d-none');
+            //update title of selected entry
+            tarotName.textContent = localEntries[i].title;
+            nameContainer.appendChild(tarotName);
+            //update date 
+            content.textContent = localEntries[i].date;
+            dateContainer.appendChild(content);
+            //update prompt
+            prompt.textContent = localEntries[i].prompt;
+            promptContainer.appendChild(prompt);
+            //update entry body
+            const contentBody = document.querySelector('.content-body');
+            contentBody.textContent = localEntries[i].body;
+            contentBody.append;
+            //display prompt image in content section
+            const newStrippedNames = localEntries[i].title.split(' ').join('');
+            const newLowerCaseNames = newStrippedNames.toLowerCase();
+            const newImage = document.querySelector('.tarot-card'); 
+            newImage.src = "/img/" + newLowerCaseNames + ".jpg"
+
+        })
     }
 });
