@@ -190,7 +190,7 @@ myEntries.addEventListener('click', () => {
         + localEntries[i].title
         +`</b>`
         + " "
-        + localEntries[i].date +
+        + localEntries[i].date.substring(0,15) +
         `</a>`;
         contentContainer.appendChild(entryLink);
         //create a unique click event listener for each entry
