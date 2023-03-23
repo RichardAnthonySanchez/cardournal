@@ -174,6 +174,11 @@ myEntries.addEventListener('click', () => {
     const header = document.querySelector('.header');
     header.classList.add('d-none');
     for (let i = 0; i < localEntries.length; i++) {
+        //if the date is undefined, don't display
+        if(localEntries[i].date === undefined){
+            localEntries[i].date = "entry has no date"
+        } else {
+        //if date is defined, display
         const contentContainer = document.querySelector('.content');
         const entryLink = document.createElement('li');
         entryLink.innerHTML = 
@@ -211,6 +216,7 @@ myEntries.addEventListener('click', () => {
             const newImage = document.querySelector('.tarot-card'); 
             newImage.src = "/img/" + newLowerCaseNames + ".jpg"
 
-        })
+            })
+        }
     }
 });
