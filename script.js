@@ -181,6 +181,7 @@ myEntries.addEventListener('click', () => {
         //if date is defined, display
         const contentContainer = document.querySelector('.content');
         const entryLink = document.createElement('li');
+        entryLink.classList.add('entry-link')
         entryLink.innerHTML = 
         `<a href="#"`
         + `id=`
@@ -196,6 +197,11 @@ myEntries.addEventListener('click', () => {
         //create a unique click event listener for each entry
         const entryClick = document.getElementById(i);
         entryClick.addEventListener('click', () => {
+            //hide entry links
+            const entryList = document.querySelectorAll('.entry-link');
+            for (let i = 0; i < entryList.length; i++){
+                entryList[i].classList.add('d-none');   
+            }            
             //show header and content again
             header.classList.remove('d-none');
             contentAlign.classList.remove('d-none');
