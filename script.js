@@ -186,6 +186,10 @@ myEntries.addEventListener('click', () => {
         + `id=`
         + i
         + `>`
+        +`<b>`
+        + localEntries[i].title
+        +`</b>`
+        + " "
         + localEntries[i].date +
         `</a>`;
         contentContainer.appendChild(entryLink);
