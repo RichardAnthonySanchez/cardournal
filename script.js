@@ -224,7 +224,7 @@ myEntries.addEventListener('click', () => {
             const newStrippedNames = localEntries[i].title.split(' ').join('');
             const newLowerCaseNames = newStrippedNames.toLowerCase();
             const newImage = document.querySelector('.tarot-card'); 
-            newImage.src = "img/" + newLowerCaseNames + ".jpg"
+            newImage.src = "../img/" + newLowerCaseNames + ".jpg"
 
             })
         }
