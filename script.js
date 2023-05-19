@@ -22,7 +22,7 @@ const promptNames = ["The Fool", "The Magician", "The High Priestess", "The Empr
 
 //generate random number for prompts
 const randomNumber = Math.floor(Math.random()* 78);
-console.log(promptNames[randomNumber]);
+//console.log(promptNames[randomNumber]);
 
 //display prompt name in header
 const nameContainer = document.querySelector('.tarot-name')
@@ -34,7 +34,7 @@ nameContainer.appendChild(tarotName);
 const strippedNames = promptNames[randomNumber].split(' ').join('');
 const lowerCaseNames = strippedNames.toLowerCase();
 const image = document.querySelector('.tarot-card'); 
-image.src = "/img/" + lowerCaseNames + ".jpg"
+image.src = "img/" + lowerCaseNames + ".jpg"
 
 //all 78 prompts
 const prompts = [
@@ -117,7 +117,7 @@ const prompts = [
 "How do I define luxury?",
 "If I was financially conservative how would I view my current situation? At what point is that valuable? At what point is that a burden?"
 ];
-console.log(prompts.length)
+//console.log(prompts.length)
 
 //display prompt in the content section
 const promptContainer = document.querySelector('.prompt')
@@ -224,7 +224,7 @@ myEntries.addEventListener('click', () => {
             const newStrippedNames = localEntries[i].title.split(' ').join('');
             const newLowerCaseNames = newStrippedNames.toLowerCase();
             const newImage = document.querySelector('.tarot-card'); 
-            newImage.src = "../img/" + newLowerCaseNames + ".jpg"
+            newImage.src = "img/" + newLowerCaseNames + ".jpg"
 
             })
         }
